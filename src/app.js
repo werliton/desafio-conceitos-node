@@ -11,9 +11,12 @@ app.use(cors());
 const repositories = [];
 
 app.get("/repositories", (request, response) => {
- 
+    return response.json(repositories)
 });
 
+/**
+ * Realiza o cadastro de repositorio
+ */
 app.post("/repositories", (request, response) => {
   const { title, url, techs } = request.body
 
